@@ -1,0 +1,206 @@
+IMI ANSIBLE env
+
+10.0.4.64
+hudson
+hud50n
+cd deployment_scripts
+
+
+Passwordless
+ 
+ssh-keygen
+ssh-copy-id -i ~/.ssh/id_rsa.pub remote-host
+
+Change mgt
+provisioning
+Automation
+Orchestration ex music guider
+
+Orchestration is nothing but handiling multiple tasks in multiple servers in particular order
+
+
+Why ansible
+simple
+roubest
+agent less
+no complex upgrades
+there are key concepts
+
+APS must be linux ansible control station
+
+ansible walt
+
+ansible play books can only run with user permitions
+
+core modules
+ex lvm module
+
+playbooks
+yaml markup language
+
+ex 
+inst
+conf
+service s/st
+
+play book contains n number of play
+
+ifconfig
+    2  www.google.com
+    3  ip a
+    4  nmcli
+    5  nmcli d s
+    6  nmcli con up id ens33
+    7  init 0
+    8  nmcli d s
+    9  nmcli con up id ens33
+   10  ping www.google.com
+   11  ip a
+   12  ping 10.0.32.171
+   13  curl www.google.com
+   14  curl yahoo.com
+   15  ip a
+   16  nmcli d s
+   17  nmcli con up id ens33
+   18  reboot
+   19  exit
+   20  hostname
+   21  cat /etc/hosts
+   22  hostname
+   23  exit
+   24  ip a
+   25  ssh root@192.168.75.129
+   26  ip a
+   27  ssh-keygen
+   28  ssh-copy-id -i ~/.ssh/id_rsa.pub root@192.168.75.129
+   29  ssh 192.168.75.129
+   30  ip a
+   31  ssh 192.168.75.129
+   32  python --version
+   33  ip a
+   34  who
+   35  exit
+   36  python --version
+   37  who
+   38  ssh 192.168.75.129
+   39  clear
+   40  yum install epel-release
+   41  yum install ansible -y
+   42  ansible --version
+   43  mkdir ansible-example
+   44  cd ansible-example/
+   45  clear
+   46  ls
+   47  vi inventory
+   48  ansible -i inventory -m ping
+   49  ansible all -i inventory -m ping
+   50  ansible 192.168.75.129 -i inventory -m ping
+   51  ansible-doc -l
+   52  cl
+   53  clear
+   54  ansibleans
+   55  ansible-doc -l user
+   56  ansible-doc -l command
+   57  ansible all -i inventory -m ping
+   58  cd ansible-example/
+   59  ll
+   60  ansible all -i inventory -m ping
+   61  clear
+   62  ansible all -i inventory -m shell -a "df -hT"
+   63  ansible all -i inventory -m shell -a "w"
+   64  pwd
+   65  vi acsfile
+   66  ansible all -i inventory -m copy "src=acsfile dest=/tmp"
+   67  ansible all -i inventory -m copy "src=./acsfile dest=/tmp"
+   68  clear
+   69  pwd
+   70  ansible all -i inventory -m copy "src=/root/ansible-example/acsfile dest=/tmp"
+   71  clear
+   72  ansible all -i inventory -m copy "src=/root/ansible-example/acsfile dest=/tmp/"
+   73  clear
+   74  ansible all -i inventory -m copy "src=/root/ansible-example/acsfile dest=/tmp/acsfile"
+   75  clear
+   76  ansible all -i inventory -m copy "src=/root/ansible-example/acsfile dest=/tmp/acsfile"
+   77  clear
+   78  ansible all -i inventory -m copy "src=/root/ansible-example/acsfile dest=/tmp/acsfile" -vvvv
+   79  clear
+   80  ls
+   81  ansible all -i inventory -m copy -a "src=/root/ansible-example/acsfile dest=/tmp/"
+   82  ansible-doc copy
+   83  clear
+   84  ansible-doc service
+   85  ansible-doc yum
+   86  clear
+   87  vi main.yml
+   88  cat main.yml
+   89  ansible-doc yum
+   90  clear
+   91  ls
+   92  mv main.yml ansible-example/
+   93  cd ansible-example/
+   94  ls
+   95  rm -rf acsfile
+   96  ls
+   97  ansible-playbook -i inventory main.yml
+   98  vi main.yml
+   99  ansible-playbook -i inventory main.yml
+   
+   
+   
+   yum install epel-release
+
+yum install ansile -y
+
+PIP (pyton Index package)
+
+ansible --version
+
+mkdir ansible-example
+# vi inventory (Creating a file, name can be anything)
+192.168.75.129
+
+
+
+1. ansible all -i inventory -m ping 
+
+2. ansible-doc -l
+
+
+
+ad-hoc commands --> ansible all -i inventory -m ping
+
+ecc -> ec2 -> Elastic Coloud Compute
+
+ansible-doc -l
+ansible-doc <module_name>
+indentation
+
+server hardening
+ssh hardening
+
+
+
+ad-hoc commands --> ansible all -i inventory -m ping
+
+ecc -> ec2 -> Elastic Coloud Compute
+
+ansible-doc -l
+ansible-doc <module_name>
+indentation
+
+server hardening
+ssh hardening
+
+
+
+
+git clone https://github.com/subaniprasad/icinga2_installation
+
+
+ansible-playbook -i hosts main.yml
+
+ansible all -i hosts -m ping
+
+
+http://192.168.222.131/icingaweb2/setup
+
