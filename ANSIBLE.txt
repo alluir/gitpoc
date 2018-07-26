@@ -1,14 +1,3 @@
-first line`:wq
-second line
-
-third line
-
-fourth line
-
-Fifth line
-
-sixth line
-
 
 IMI ANSIBLE env
 
